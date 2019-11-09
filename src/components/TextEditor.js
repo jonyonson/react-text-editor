@@ -4,7 +4,9 @@ import InlineStyleControls from './InlineStyleControls';
 import BlockStyleControls from './BlockStyleControls';
 
 function TextEditor() {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
 
   const editor = useRef(null);
 
@@ -44,6 +46,7 @@ function TextEditor() {
   }
 
   function mapKeyToEditorCommand(e) {
+    // handle TAB keypress
     if (e.keyCode === 9) {
       const newEditorState = RichUtils.onTab(e, editorState, 4);
       if (newEditorState !== editorState) {

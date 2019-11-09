@@ -3,7 +3,7 @@ import TextEditor from './components/TextEditor';
 
 function App() {
   return (
-    <div className="editor-wrapper">
+    <div className="DraftEditor-wrapper">
       <TextEditor />
     </div>
   );

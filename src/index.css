@@ -16,7 +16,7 @@ code {
     monospace;
 }
 
-.editor-wrapper {
+.DraftEditor-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 10%;
@@ -31,21 +31,21 @@ code {
 }
 
 .RichEditor-controls {
-  /* margin-bottom: 8px;- */
   padding: 5px;
   border: 1px solid black;
   border-bottom: none;
 }
+
+.RichEditor-controls:nth-child(2n) {
+  border-top: none;
+}
+
 .RichEditor-styleButton {
   cursor: pointer;
   font-size: 14px;
   padding: 2px;
   margin-right: 5px;
   color: rgba(0, 0, 0, 0.7);
-}
-
-.RichEditor-controls:nth-child(2n) {
-  border-top: none;
 }
 
 .RichEditor-styleButton.RichEditor-activeButton {
